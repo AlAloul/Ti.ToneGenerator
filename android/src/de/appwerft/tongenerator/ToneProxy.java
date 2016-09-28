@@ -29,16 +29,21 @@ public class ToneProxy extends KrollProxy {
 	@Override
 	public void handleCreationDict(KrollDict options) {
 		double freq = 440.0;
+		double volume = 1.0;
 		int duration = 1000;
+
 		super.handleCreationDict(options);
 
 		if (options.containsKey("freq")) {
 			freq = options.getDouble("freq");
 		}
+		if (options.containsKey("volume")) {
+			volume = options.getDouble("volume");
+		}
 		if (options.containsKey(TiC.PROPERTY_DURATION)) {
 			duration = options.getInt(TiC.PROPERTY_DURATION);
 		}
-		generateTone(freq, duration);
+		generateTone(freq, duration, volume);
 	}
 
 	@Kroll.method
@@ -46,7 +51,7 @@ public class ToneProxy extends KrollProxy {
 		track.play();
 	}
 
-	private AudioTrack generateTone(double freqHz, int durationMs) {
+	private AudioTrack generateTone(double freqHz, int durationMs, double volume) {
 		int count = (int) (44100.0 * 2.0 * (durationMs / 1000.0)) & ~1;
 		short[] samples = new short[count];
 		for (int i = 0; i < count; i += 2) {
