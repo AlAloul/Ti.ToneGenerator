@@ -1,0 +1,18 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name TonegeneratorBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "de.appwerft.tongenerator.ToneProxy.h"
+#include "de.appwerft.tongenerator.TonegeneratorModule.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+de.appwerft.tongenerator.ToneProxy, ::de::appwerft::tongenerator::tonegenerator::ToneProxy::bindProxy, ::de::appwerft::tongenerator::tonegenerator::ToneProxy::dispose
+de.appwerft.tongenerator.TonegeneratorModule, ::de::appwerft::tongenerator::TonegeneratorModule::bindProxy, ::de::appwerft::tongenerator::TonegeneratorModule::dispose
+%%

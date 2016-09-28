@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.0.1
+apiversion: 2
+architectures: armeabi armeabi-v7a x86
+description: tonegenerator
+author: Rainer Knöterich
+license: Specify your license
+copyright: Copyright (c) 2016 by 
+
+# these should not be edited
+name: tonegenerator
+moduleid: de.appwerft.tongenerator
+guid: 1968223b-b248-47e8-bb2b-f3eab548feab
+platform: android
+minsdk: 5.2.0.GA
