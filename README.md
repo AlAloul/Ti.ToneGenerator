@@ -1,6 +1,6 @@
 #Ti.ToneGenerator
 
-This Titanium module for Android generates tones.
+This Titanium module for Android generates single tones. For more complexity you can look to [Ti.Fugue](https://github.com/AppWerft/Ti.Fugue/)
 
 ##Usage:
 
